@@ -10,6 +10,15 @@
         <p>Tipologia: {{ $project->type->name }}</p>
     @endif
 
+    @if($project->technologies->isNotEmpty())
+        <p>Tecnologie utilizzate:</p>
+        <ul>
+            @foreach($project->technologies as $technology)
+                <li>{{ $technology->name }}</li>
+            @endforeach
+        </ul>
+    @endif
+
     <p>
         {{ $project->description }}
     </p>

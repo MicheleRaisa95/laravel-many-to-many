@@ -21,6 +21,14 @@
             </select>
         </div>
         <div class="mb-3">
+            <label for="technologies" class="form-label">Tecnologie</label>
+            <select multiple class="form-control" id="technologies" name="technologies[]">
+                @foreach($technologies as $technology)
+                    <option value="{{ $technology->id }}">{{ $technology->name }}</option>
+                @endforeach
+            </select>
+        </div>
+        <div class="mb-3">
             <label for="description" class="form-label">Descrizione</label>
             <textarea class="form-control" id="description" name="description" rows="5" required></textarea>
         </div>
